@@ -43,6 +43,7 @@ SH.history.manage = function() {
 					if(typeof SH.pages[state] !== 'undefined') {
 						SH.loadPage(state,args);
 					} else {
+						console.log('test')
 						SH.open('pagenotfound');
 					}
 				}
