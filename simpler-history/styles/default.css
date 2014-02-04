@@ -217,7 +217,7 @@ section.page#home .banner p {
   color: #FFF;
   margin-bottom: 0px;
 }
-section.page#home .banner button {
+section.page#home .banner .button {
   display: inline-block;
   margin-top: 20px;
   border: 1px solid #96283e;
@@ -225,7 +225,7 @@ section.page#home .banner button {
   font-size: 24px;
   border-bottom-width: 2px;
 }
-section.page#home .banner button:hover {
+section.page#home .banner .button:hover {
   cursor: pointer;
 }
 section.page#home .about {

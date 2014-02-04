@@ -75,7 +75,7 @@ section.page#home { padding-left: 20px;
 	.banner {background: $scheme;
 		h1 { font-size: 96px; color: #FFF; width: 100%;}
 		p { font-size: 20px; margin-top: 20px; color: #FFF; margin-bottom: 0px; }
-		button { display: inline-block; margin-top: 20px; border: 1px solid darken($scheme,10%); background: #FFF; font-size: 24px; border-bottom-width: 2px;
+		.button { display: inline-block; margin-top: 20px; border: 1px solid darken($scheme,10%); background: #FFF; font-size: 24px; border-bottom-width: 2px;
 			&:hover { cursor: pointer; }
 		}
 	}
