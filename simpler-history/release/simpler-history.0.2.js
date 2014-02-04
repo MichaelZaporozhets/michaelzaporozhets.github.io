@@ -27,7 +27,7 @@ SH.history.currentPageArgs = [];
 SH.history.stop = false;
 SH.open = function(name) {
 	if(SH.history.pushState) {
-		window.history.pushState('', name, root+name);
+		window.history.pushState('', name, SH.info.root+name);
 	} else {
 		document.location.hash = '#!/' + name;
 	}
