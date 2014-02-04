@@ -4,7 +4,8 @@ SH.info = {
 	pageArgs : [],
 	domain : '',
 	holdingDomain : '',
-	lastPage: ''
+	lastPage: '',
+	root: '/'
 };
 SH.refOpenFunc = function(){return false;};
 SH.pages = {
@@ -26,7 +27,7 @@ SH.history.currentPageArgs = [];
 SH.history.stop = false;
 SH.open = function(name) {
 	if(SH.history.pushState) {
-		window.history.pushState('', name, "/"+name);
+		window.history.pushState('', name, root+name);
 	} else {
 		document.location.hash = '#!/' + name;
 	}
@@ -141,9 +142,3 @@ SH.init = function(refOpenFunc,pushState) {
 	}
 	return;
 };
-
-var openPage = function(page) {
-	console.log('do some logic for the page: '+page);
-	return false;
-};
-SH.init(openPage,true);

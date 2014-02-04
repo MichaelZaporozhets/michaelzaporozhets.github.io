@@ -16,9 +16,17 @@ $(window).resize(function() {
 });
 
 
+var openPage = function(page) {
+    console.log('do some logic for the page: '+page);
+    return false;
+};
+
 jQuery(function ($) {
     layout();
-    $('nav ul li').click(function() {
-       SH.history.open($(this).data('pageref').toLowerCase());
+    SH.info.root = '/simpler-history/';
+    SH.init(openPage,true);
+
+     $('nav ul li').click(function() {
+       SH.open($(this).data('pageref').toLowerCase());
     });
 });
