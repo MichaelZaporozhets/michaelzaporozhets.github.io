@@ -37,7 +37,7 @@ header { background: $scheme; position: relative; z-index: 3; top:-100px; @inclu
 section.page { @include Transition(1s); z-index: 1; opacity: 0; height: 0px; position: absolute; width: 960px; left:50%; margin-left: -480px;
 	&.current { z-index: 2; opacity: 1; display:block; height: auto; }
 
-	section{ @include Transition(1s);position: relative; top: -1000px; }
+	section{ @include Transition(1s);position: relative; }
 	
 	.triangle { height: 102px;width: 102px;float: left;margin-top: -30px;border: 51px solid transparent;border-top: 51px solid #EEE;border-right: 51px solid #EEE;margin-left: -102px; }
 	.banner {top:-1000px; padding-top: 20px; padding-bottom: 30px; background: transparent; position: relative; z-index: 2; padding-left: 20px;
@@ -48,13 +48,11 @@ section.page { @include Transition(1s); z-index: 1; opacity: 0; height: 0px; pos
 }
 
 section.page#home { padding-left: 20px;
-	.triangle { top: -500px; margin-left: -102px; position: absolute !important; }
 	.banner {background: $scheme;
 		h1 { font-size: 96px; color: #FFF; float: left; width: 100%; max-width: 600px;  }
 		img { float: right; width: 200px; margin-right: 20px; }
 	}
-	.triangle.big { z-index: 3;top: -1000px;right: 0px;height: 242px;width: 242px;border-width: 242px; }
-	.about { padding-top: 30px; top: -1000px;
+	.about { padding-top: 30px;
 		p { font-size: 18px;line-height: 32px; max-width: 600px; display:block; margin-bottom: 30px; letter-spacing: 1px;
 			span.emph_b { font-weight: bold; }
 			span.emph_i { font-style: italic; }
@@ -62,9 +60,6 @@ section.page#home { padding-left: 20px;
 	}
 }
 
-section.page#blog_post {
-	.main { top: -100px; }
-}
 
 body.mobile {
 	section.page { width: 100% !important; left: 0px !important; margin-left: 0px !important; overflow: hidden; padding-right: 20px;

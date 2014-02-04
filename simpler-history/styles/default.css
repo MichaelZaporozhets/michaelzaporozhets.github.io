@@ -124,7 +124,6 @@ section.page section {
   -o-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
   position: relative;
-  top: -1000px;
 }
 section.page .triangle {
   height: 102px;
@@ -165,11 +164,6 @@ section.page .main p {
 section.page#home {
   padding-left: 20px;
 }
-section.page#home .triangle {
-  top: -500px;
-  margin-left: -102px;
-  position: absolute !important;
-}
 section.page#home .banner {
   background: #33bea1;
 }
@@ -185,17 +179,8 @@ section.page#home .banner img {
   width: 200px;
   margin-right: 20px;
 }
-section.page#home .triangle.big {
-  z-index: 3;
-  top: -1000px;
-  right: 0px;
-  height: 242px;
-  width: 242px;
-  border-width: 242px;
-}
 section.page#home .about {
   padding-top: 30px;
-  top: -1000px;
 }
 section.page#home .about p {
   font-size: 18px;
@@ -210,10 +195,6 @@ section.page#home .about p span.emph_b {
 }
 section.page#home .about p span.emph_i {
   font-style: italic;
-}
-
-section.page#blog_post .main {
-  top: -100px;
 }
 
 body.mobile section.page {
