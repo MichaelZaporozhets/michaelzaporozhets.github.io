@@ -34,8 +34,8 @@ header { background: $scheme; position: relative; z-index: 3; @include Transitio
 	}
 }
 
-section.page { @include Transition(0s); z-index: 1; opacity: 0; height: 0px; position: absolute; width: 960px; left:50%; margin-left: -480px;
-	&.current { z-index: 2; opacity: 1; display:block; height: auto; }
+section.page { @include Transition(0s); z-index: 1; opacity: 0; position: absolute; width: 960px; left:50%; margin-left: -480px;
+	&.current { z-index: 2; opacity: 1; display:block; }
 
 	section{ @include Transition(1s);position: relative; }
 
