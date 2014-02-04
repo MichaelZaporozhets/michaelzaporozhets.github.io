@@ -224,6 +224,9 @@ section.page#home .banner .button {
   background: #FFF;
   font-size: 24px;
   border-bottom-width: 2px;
+  color: #000 !important;
+  padding: 10px;
+  text-decoration: none;
 }
 section.page#home .banner .button:hover {
   cursor: pointer;
