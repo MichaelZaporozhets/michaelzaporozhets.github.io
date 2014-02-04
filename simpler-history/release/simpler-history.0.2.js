@@ -27,7 +27,7 @@ SH.history.currentPageArgs = [];
 SH.history.stop = false;
 SH.open = function(name) {
 	if(SH.history.pushState) {
-		window.history.pushState('', name, SH.info.root+name);
+		window.history.pushState('', name, '/'+SH.info.root+name);
 	} else {
 		document.location.hash = '#!/' + name;
 	}
@@ -87,7 +87,7 @@ SH.history.manage = function() {
 			SH.open(hash.substr(3));
 			return false;
 		}
-		if(hash.length > 1 && window.location.pathname == '/') {
+		if(hash.length > 1 && window.location.pathname.substr(1) == SH.info.root) {
 			if(hash.substr(0,3) == '#!/') {
 				hash = hash.substr(3).split('#')[0];
 				if(hash.split(':')[1] !== 'undefined') {
@@ -99,12 +99,13 @@ SH.history.manage = function() {
 				hash = hash.split('/')[0];
 				var args = document.location.hash.substr(3).split('/');
 				if(document.location.hash.substr(3) !== SH.info.pageArgs.join('/')) {
+					var state = hash;
 				  	manangeChange();
 				}
 			}
-		} else if(window.location.pathname !== '/') {
+		} else if(window.location.pathname.replace(SH.info.root,'') !== '/') {
 			SH.history.stop = true;
-			window.location.assign(SH.info.root + '#!/' +window.location.pathname.substr(1));
+			window.location.assign('/'+SH.info.root+'#!/' +window.location.pathname.replace(SH.info.root,'').substr(1));
 		} else {
 			SH.info.page = 'home';
 			SH.open('home');

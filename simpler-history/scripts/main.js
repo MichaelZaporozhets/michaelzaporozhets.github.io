@@ -23,7 +23,7 @@ var openPage = function(page) {
 
 jQuery(function ($) {
     layout();
-    SH.info.root = '/simpler-history/';
+    SH.info.root = 'simpler-history/';
     SH.init(openPage,false);
 
      $('nav ul li').click(function() {
