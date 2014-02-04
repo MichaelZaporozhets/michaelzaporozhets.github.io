@@ -34,6 +34,7 @@ SH.open = function(name) {
 };
 SH.history.manage = function() {
 	var manangeChange = function() {
+		console.log(state);
 		if(typeof SH.pages[state] !== 'undefined') {
 			if(typeof SH.pages[state][0] !== 'undefined' && typeof SH.pages[state][0].sub !== 'undefined') {
 				if(typeof SH.pages[state][0].sub[subPageTest] !== 'undefined') {
@@ -43,7 +44,6 @@ SH.history.manage = function() {
 					if(typeof SH.pages[state] !== 'undefined') {
 						SH.loadPage(state,args);
 					} else {
-						console.log('test')
 						SH.open('pagenotfound');
 					}
 				}
