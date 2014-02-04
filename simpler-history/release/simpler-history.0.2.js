@@ -104,7 +104,7 @@ SH.history.manage = function() {
 			}
 		} else if(window.location.pathname !== '/') {
 			SH.history.stop = true;
-			window.location.assign( '/#!/' +window.location.pathname.substr(1));
+			window.location.assign(SH.info.root + '#!/' +window.location.pathname.substr(1));
 		} else {
 			SH.info.page = 'home';
 			SH.open('home');
