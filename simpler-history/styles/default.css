@@ -179,6 +179,7 @@ section.page .banner {
   position: relative;
   z-index: 2;
   padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
 }
 section.page .banner a {
