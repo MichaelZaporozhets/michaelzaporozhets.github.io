@@ -146,6 +146,22 @@ section.page p.emph_b, section.page span.emph_b {
 section.page p.emph_i, section.page span.emph_i {
   font-style: italic;
 }
+section.page p.code {
+  background: #EEE;
+  display: inline-block;
+  min-width: 90%;
+  line-height: 150%;
+  border-left: 5px solid #000;
+  padding-left: 10px;
+  padding-right: 20px;
+  display: block;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+section.page p.code span.comment {
+  color: #666;
+}
 section.page .triangle {
   height: 102px;
   width: 102px;
@@ -205,7 +221,8 @@ section.page#home .about p {
   line-height: 32px;
   max-width: 600px;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  margin-top: 15px;
   letter-spacing: 1px;
 }
 

@@ -23,7 +23,7 @@
 
 		<link rel="stylesheet" type="text/css" href="./styles/reset.css" />
 		<link rel="stylesheet" type="text/css" href="./styles/default.css" media="screen" />
-		<script src="./release/simpler-history.0.2.js"></script>
+		<script src="./release/min/simpler-history.0.2.min.js"></script>
 		<script src="./scripts/jquery.js"></script>
 		<script src="./scripts/main.js"></script>
 	</head>
@@ -63,8 +63,33 @@
 			<section class="about motion">
 				<div class="inner">
 					<h2>How do I make it go go go?</h2>
-					<p>Add something like <span class="code"><pre>&lt;script src="http://michaelzaporozhets.github.io/simpler-history/release/min/simpler-history.0.2.min.js"&gt;</script></pre></span></p>
-					<p class="emph_i emph_b">Boo-ya!</p>
+					<p>Add something like this to your head.</p>
+					<xmp><script src="path/to/simpler-history.0.2.min.js"></script></xmp>
+					<br />
+					<p class="">And then start it up like this:</p>
+					<p class="code">var openPage = function(page) {
+  console.log('opened page: '+page);
+  return false;
+};
+
+<span class="comment">// You've gotta define where the page root is 
+otherwise everything will break..</span>
+SH.info.root = 'simpler-history/';
+
+<span class="comment">// 'openPage' is the function you want to use to 
+respond to page changes and the seconds argument is options</span>
+SH.init(openPage,{forceFallback:true}});</p>
+				</div>
+			</section>
+		</section>
+		<section class="page" id="pagenotfound">
+			<section class="about">
+				<div class="inner">
+					<br/>
+					<p>
+						<h3>This is not the page you are looking for...</h3>
+					</p>
+					<p><a href="javascript:SH.open('home');">Back home?</a></p>
 				</div>
 			</section>
 		</section>

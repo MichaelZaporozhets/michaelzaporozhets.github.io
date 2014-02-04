@@ -123,23 +123,30 @@ SH.history.patrol = function(callback) {
 	callback(true);
 };
 
-SH.init = function(refOpenFunc,pushState) {
-	var pushState = pushState;
-	//to override or not to override
-	if(typeof pushState == 'undefined') { pushState = true; }
-	SH.history.pushState = false;
-	if (history.pushState && pushState == true) {
-		SH.history.pushState = true;
+
+SH.init = function(refOpenFunc,options) {
+	var soItBegins = function(refOpenFunc,options) {
+		var pushState = options.forceFallback;
+		//to override or not to override
+		if(typeof pushState == 'undefined') { pushState = true; }
+		SH.history.pushState = false;
+		if (history.pushState && pushState == false) {
+			SH.history.pushState = true;
+		}
+		if(typeof refOpenFunc == 'undefined') {
+			console.log('Simpler History: You must declare the main handler as the first argument of SH.init.');
+		} else {
+			SH.refOpenFunc = refOpenFunc;
+			SH.history.patrol(function(test) {
+				if(test == true) {
+					console.log('Simpler History Initialized...');
+				}
+			});
+		}
+		return;
 	}
-	if(typeof refOpenFunc == 'undefined') {
-		console.log('Simpler History: You must declare the main handler as the first argument of SH.init.');
-	} else {
-		SH.refOpenFunc = refOpenFunc;
-		SH.history.patrol(function(test) {
-			if(test == true) {
-				console.log('Simpler History Initialized...');
-			}
-		});
-	}
-	return;
+	
+	window.addEventListener ? 
+	window.addEventListener("load",function() { soItBegins(refOpenFunc,options) },false) : 
+	window.attachEvent && window.attachEvent("onload",function() { soItBegins(refOpenFunc,options) });
 };

@@ -24,19 +24,17 @@ $(window).scroll(function() {
     }
 });
 
-
-
 var openPage = function(page) {
     console.log('opened page: '+page);
     $('section.page').removeClass('current');
     $('section.page#'+page).addClass('current');
-    return false;
 };
+
+SH.info.root = 'simpler-history/';
+SH.init(openPage,{forceFallback:true});
 
 jQuery(function ($) {
     layout();
-    SH.info.root = 'simpler-history/';
-    SH.init(openPage,false);
 
      $('nav ul li').click(function() {
        SH.open($(this).data('pageref').toLowerCase());
