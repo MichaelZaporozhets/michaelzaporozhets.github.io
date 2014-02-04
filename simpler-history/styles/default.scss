@@ -7,20 +7,20 @@
 	transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-$scheme : #33BEA1;
+$scheme : #BE334F;
 
-html,body { font-family: Times New Roman; font-weight: 300; background: #FFFFFF; padding-top: 30px; @include Transition(2s);}
+html,body { font-family: Times New Roman; font-weight: 300; background: #FFFFFF; padding-top: 30px; @include Transition(2s); font-size: 18px; }
 body * { box-sizing: border-box; }
 .inner { max-width:1160px;padding-left: 20px; padding-right: 20px; }
 h1,h2,h3,h4 { 
 	&.script {  }
 }
 h1 { font-size: 42px; margin: auto; width: 100%; font-weight: bold;letter-spacing: 3px; }
-h2 {  }
+h2 { font-size: 24px; margin: auto; width: 100%; font-weight: bold;letter-spacing: 1px; margin-bottom: 20px; }
 h3 {  }
 h4 {  }
 .clear { clear: both; }
-header { background: $scheme; position: relative; z-index: 3; top:-100px; @include Transition(300ms); position: fixed; width: 100%; color: #FFF;
+header { background: $scheme; position: relative; z-index: 3; @include Transition(300ms); position: fixed; width: 100%; color: #FFF; top: 0px;
 	.inner { padding-right: 0px; width: 960px; margin: auto; padding-left: 20px;
 		nav {
 			ul {
@@ -34,29 +34,34 @@ header { background: $scheme; position: relative; z-index: 3; top:-100px; @inclu
 	}
 }
 
-section.page { @include Transition(1s); z-index: 1; opacity: 0; height: 0px; position: absolute; width: 960px; left:50%; margin-left: -480px;
+section.page { @include Transition(0s); z-index: 1; opacity: 0; height: 0px; position: absolute; width: 960px; left:50%; margin-left: -480px;
 	&.current { z-index: 2; opacity: 1; display:block; height: auto; }
 
 	section{ @include Transition(1s);position: relative; }
+
+
+
+	p,span { font-size: inherit;line-height: 32px; letter-spacing: 1px;
+		&.emph_b { font-weight: bold; }
+		&.emph_i { font-style: italic; }
+	}
+
 	
 	.triangle { height: 102px;width: 102px;float: left;margin-top: -30px;border: 51px solid transparent;border-top: 51px solid #EEE;border-right: 51px solid #EEE;margin-left: -102px; }
-	.banner {top:-1000px; padding-top: 20px; padding-bottom: 30px; background: transparent; position: relative; z-index: 2; padding-left: 20px;
+	.banner {padding-top: 20px; padding-bottom: 30px; background: transparent; position: relative; z-index: 2; padding-left: 20px;
 	}
-	.main {top:-1000px;padding-top: 20px; padding-bottom: 50px; border-left: 20px solid #E0E0E0; margin: auto; margin-top: -20px;
+	.main {padding-top: 20px; padding-bottom: 50px; border-left: 20px solid #E0E0E0; margin: auto; margin-top: -20px;
 		p { font-size: 16px;line-height: 32px; max-width: 600px; display:block; margin-bottom: 30px; letter-spacing: 1px;}
 	}
 }
 
 section.page#home { padding-left: 20px;
 	.banner {background: $scheme;
-		h1 { font-size: 96px; color: #FFF; float: left; width: 100%; max-width: 600px;  }
-		img { float: right; width: 200px; margin-right: 20px; }
+		h1 { font-size: 96px; color: #FFF; width: 100%;}
+		p { font-size: 20px; margin-top: 20px; color: #FFF; margin-bottom: 0px; max-width: 60%;}
 	}
 	.about { padding-top: 30px;
-		p { font-size: 18px;line-height: 32px; max-width: 600px; display:block; margin-bottom: 30px; letter-spacing: 1px;
-			span.emph_b { font-weight: bold; }
-			span.emph_i { font-style: italic; }
-		}
+		p { line-height: 32px; max-width: 600px; display:block; margin-bottom: 30px; letter-spacing: 1px;}
 	}
 }
 

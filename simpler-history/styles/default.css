@@ -9,6 +9,7 @@ html, body {
   -ms-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  font-size: 18px;
 }
 
 body * {
@@ -29,15 +30,23 @@ h1 {
   letter-spacing: 3px;
 }
 
+h2 {
+  font-size: 24px;
+  margin: auto;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
 .clear {
   clear: both;
 }
 
 header {
-  background: #33bea1;
+  background: #be334f;
   position: relative;
   z-index: 3;
-  top: -100px;
   -webkit-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
   -ie-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
@@ -47,6 +56,7 @@ header {
   position: fixed;
   width: 100%;
   color: #FFF;
+  top: 0px;
 }
 header .inner {
   padding-right: 0px;
@@ -92,16 +102,16 @@ header .inner nav ul li.onScrollHide {
 }
 header .inner nav ul li:hover {
   cursor: pointer;
-  background: #28967f;
+  background: #96283e;
 }
 
 section.page {
-  -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-  -moz-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-  -ie-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-  -ms-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
   z-index: 1;
   opacity: 0;
   height: 0px;
@@ -125,6 +135,17 @@ section.page section {
   transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
   position: relative;
 }
+section.page p, section.page span {
+  font-size: inherit;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+section.page p.emph_b, section.page span.emph_b {
+  font-weight: bold;
+}
+section.page p.emph_i, section.page span.emph_i {
+  font-style: italic;
+}
 section.page .triangle {
   height: 102px;
   width: 102px;
@@ -136,7 +157,6 @@ section.page .triangle {
   margin-left: -102px;
 }
 section.page .banner {
-  top: -1000px;
   padding-top: 20px;
   padding-bottom: 30px;
   background: transparent;
@@ -145,7 +165,6 @@ section.page .banner {
   padding-left: 20px;
 }
 section.page .main {
-  top: -1000px;
   padding-top: 20px;
   padding-bottom: 50px;
   border-left: 20px solid #E0E0E0;
@@ -165,36 +184,29 @@ section.page#home {
   padding-left: 20px;
 }
 section.page#home .banner {
-  background: #33bea1;
+  background: #be334f;
 }
 section.page#home .banner h1 {
   font-size: 96px;
   color: #FFF;
-  float: left;
   width: 100%;
-  max-width: 600px;
 }
-section.page#home .banner img {
-  float: right;
-  width: 200px;
-  margin-right: 20px;
+section.page#home .banner p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #FFF;
+  margin-bottom: 0px;
+  max-width: 60%;
 }
 section.page#home .about {
   padding-top: 30px;
 }
 section.page#home .about p {
-  font-size: 18px;
   line-height: 32px;
   max-width: 600px;
   display: block;
   margin-bottom: 30px;
   letter-spacing: 1px;
-}
-section.page#home .about p span.emph_b {
-  font-weight: bold;
-}
-section.page#home .about p span.emph_i {
-  font-style: italic;
 }
 
 body.mobile section.page {

@@ -15,6 +15,16 @@ $(window).resize(function() {
     layout();
 });
 
+$(window).scroll(function() {
+    var y = $(window).scrollTop();
+    if(y > 90) {
+        $('nav li.onScrollShow').css({'width':130}).next().hide();
+    } else {
+        $('nav li.onScrollShow').css({'width':''}).next().show();
+    }
+});
+
+
 
 var openPage = function(page) {
     console.log('opened page: '+page);
