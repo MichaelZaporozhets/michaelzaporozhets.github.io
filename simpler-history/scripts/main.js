@@ -18,8 +18,8 @@ $(window).resize(function() {
 
 var openPage = function(page) {
     console.log('opened page: '+page);
-    $('.section.page').removeClass('current');
-    $('.section.page#'+page).addClass('current');
+    $('section.page').removeClass('current');
+    $('section.page#'+page).addClass('current');
     return false;
 };
 
