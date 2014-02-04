@@ -118,11 +118,13 @@ section.page {
   width: 960px;
   left: 50%;
   margin-left: -480px;
+  top: -300px;
 }
 section.page.current {
   z-index: 2;
   opacity: 1;
   display: block;
+  top: 70px;
 }
 section.page section {
   -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
@@ -254,10 +256,4 @@ body.mobile section.page .inner {
 }
 body.mobile section.page h1 {
   font-size: 36px !important;
-}
-body.mobile section.page img {
-  display: none;
-}
-body.mobile section.page .triangle.big {
-  display: none;
 }
