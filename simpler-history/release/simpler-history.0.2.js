@@ -34,7 +34,6 @@ SH.open = function(name) {
 };
 SH.history.manage = function() {
 	var manangeChange = function() {
-		console.log(state);
 		if(typeof SH.pages[state] !== 'undefined') {
 			if(typeof SH.pages[state][0] !== 'undefined' && typeof SH.pages[state][0].sub !== 'undefined') {
 				if(typeof SH.pages[state][0].sub[subPageTest] !== 'undefined') {
@@ -57,7 +56,7 @@ SH.history.manage = function() {
 		}
 	}
 	if(SH.history.pushState == true && document.location.hash.substr(0,3) !== '#!/') {
-		var state = window.location.pathname;
+		var state = window.location.pathname.replace(SH.info.root,'');
 		var fullState = '';
 		if(state.substr(0,1) == '/') {
 			state = state.substr(1);
