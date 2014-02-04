@@ -1,0 +1,77 @@
+@mixin Transition($duration: 1000ms) {
+	-webkit-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	-ie-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	-ms-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	-o-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+$scheme : #33BEA1;
+
+html,body { font-family: Times New Roman; font-weight: 300; background: #FFFFFF; padding-top: 30px; @include Transition(2s);}
+body * { box-sizing: border-box; }
+.inner { max-width:1160px;padding-left: 20px; padding-right: 20px; }
+h1,h2,h3,h4 { 
+	&.script {  }
+}
+h1 { font-size: 42px; margin: auto; width: 100%; font-weight: bold;letter-spacing: 3px; }
+h2 {  }
+h3 {  }
+h4 {  }
+.clear { clear: both; }
+header { background: $scheme; position: relative; z-index: 3; top:-100px; @include Transition(300ms); position: fixed; width: 100%; color: #FFF;
+	.inner { padding-right: 0px; width: 960px; margin: auto; padding-left: 20px;
+		nav {
+			ul {
+				li { text-align:center; display: inline-block; line-height: 60px; font-size: 18px; letter-spacing: 1px; padding-right: 20px; padding-left: 20px;
+					&.onScrollShow { @include Transition(200ms);width: 0px; white-space: pre; overflow: hidden; float: left; padding-right: 0px; padding-left: 0px; margin: 0px; }
+					&.onScrollHide { @include Transition(200ms); margin-right:0px; white-space: pre; overflow: hidden; float: left; }
+					&:hover { cursor: pointer; background: darken($scheme,10%);}
+				}
+			}
+		}
+	}
+}
+
+section.page { @include Transition(1s); z-index: 1; opacity: 0; height: 0px; position: absolute; width: 960px; left:50%; margin-left: -480px;
+	&.current { z-index: 2; opacity: 1; display:block; height: auto; }
+
+	section{ @include Transition(1s);position: relative; top: -1000px; }
+	
+	.triangle { height: 102px;width: 102px;float: left;margin-top: -30px;border: 51px solid transparent;border-top: 51px solid #EEE;border-right: 51px solid #EEE;margin-left: -102px; }
+	.banner {top:-1000px; padding-top: 20px; padding-bottom: 30px; background: transparent; position: relative; z-index: 2; padding-left: 20px;
+	}
+	.main {top:-1000px;padding-top: 20px; padding-bottom: 50px; border-left: 20px solid #E0E0E0; margin: auto; margin-top: -20px;
+		p { font-size: 16px;line-height: 32px; max-width: 600px; display:block; margin-bottom: 30px; letter-spacing: 1px;}
+	}
+}
+
+section.page#home { padding-left: 20px;
+	.triangle { top: -500px; margin-left: -102px; position: absolute !important; }
+	.banner {background: $scheme;
+		h1 { font-size: 96px; color: #FFF; float: left; width: 100%; max-width: 600px;  }
+		img { float: right; width: 200px; margin-right: 20px; }
+	}
+	.triangle.big { z-index: 3;top: -1000px;right: 0px;height: 242px;width: 242px;border-width: 242px; }
+	.about { padding-top: 30px; top: -1000px;
+		p { font-size: 18px;line-height: 32px; max-width: 600px; display:block; margin-bottom: 30px; letter-spacing: 1px;
+			span.emph_b { font-weight: bold; }
+			span.emph_i { font-style: italic; }
+		}
+	}
+}
+
+section.page#blog_post {
+	.main { top: -100px; }
+}
+
+body.mobile {
+	section.page { width: 100% !important; left: 0px !important; margin-left: 0px !important; overflow: hidden; padding-right: 20px;
+		.inner { padding-left: 5px; padding-right: 5px; }
+		h1 { font-size: 36px !important; }
+		img { display: none; }
+		.triangle { }
+		.triangle.big{ display:none;}
+	}
+}
