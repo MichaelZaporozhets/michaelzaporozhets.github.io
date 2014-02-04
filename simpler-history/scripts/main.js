@@ -24,7 +24,7 @@ var openPage = function(page) {
 jQuery(function ($) {
     layout();
     SH.info.root = '/simpler-history/';
-    SH.init(openPage,true);
+    SH.init(openPage,false);
 
      $('nav ul li').click(function() {
        SH.open($(this).data('pageref').toLowerCase());
