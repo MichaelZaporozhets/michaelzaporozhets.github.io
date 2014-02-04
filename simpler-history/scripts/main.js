@@ -17,7 +17,8 @@ $(window).resize(function() {
 
 
 var openPage = function(page) {
-    console.log('do some logic for the page: '+page);
+    $('.section.page').removeClass('current');
+    $('.section.page#'+page).addClass('current');
     return false;
 };
 
