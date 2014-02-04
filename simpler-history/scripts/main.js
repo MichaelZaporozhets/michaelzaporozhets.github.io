@@ -18,7 +18,7 @@ $(window).resize(function() {
 $(window).scroll(function() {
     var y = $(window).scrollTop();
     if(y > 90) {
-        $('nav li.onScrollShow').css({'width':130}).next().hide();
+        $('nav li.onScrollShow').css({'width':170}).next().hide();
     } else {
         $('nav li.onScrollShow').css({'width':''}).next().show();
     }

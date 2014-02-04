@@ -43,11 +43,13 @@
 				<div class="inner">
 					<h1>Simpler-history</h1>
 					<p class="content emph_i">HTML5 pushState without the tears.</p>
+					<a href="./release/min/simpler-history.0.2.min.js" target="_blank" class="button" download="./release/min/simpler-history.0.2.min.js" target="">Download</a>
 					<div class="clear"></div>
 				</div>
 			</section>
 			<section class="about motion">
 				<div class="inner">
+					<h2>Why?</h2>
 					<p>HTLM5 pushState with a fallback is probably one of the most annoying things to implement the way that <span class="emph_i">you</span> want to, ever.</p>
 					<p>This is the part where you say, 'But Michael, history.js already makes this easy...'. History.js <span class="emph_i">is</span> amazing,  but getting from zero to hero is actually a bit of a pain.</p>
 					<p>Simply put, it does way too much for something that you shouldn't even notice.</p>
@@ -64,7 +66,7 @@
 				<div class="inner">
 					<h2>How do I make it go go go?</h2>
 					<p>Add something like this to your head.</p>
-					<xmp><script src="path/to/simpler-history.0.2.min.js"></script></xmp>
+					<p class="code">&lt;script src="path/to/simpler-history.0.2.min.js"&gt;&lt;/script&gt;</p>
 					<br />
 					<p class="">And then start it up like this:</p>
 					<p class="code">var openPage = function(page) {
@@ -81,6 +83,43 @@ respond to page changes and the seconds argument is options</span>
 SH.init(openPage,{forceFallback:true}});</p>
 				</div>
 			</section>
+			<section class="about motion">
+				<div class="inner">
+					<h2>Options</h2>
+					<p>So far there's only really one.</p>
+					<p>'forceFallback' lets you force falling back to hashbangs if you don't have any backend to support yo-self.</p>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<h2>Opening pages</h2>
+					<p>Simpler-history routes to pushState <span class="emph_i">via</span> hashBangs anyway; so if you open a page with the hashbang you want to get to.... You're there! ( naturally )</p>
+					<br />
+					<p class="emph_b">Examples</p>
+					<p>Opening a page with a hashBang href attribute works. ( naturally )</p>
+					<p class="code">&lt;a href="#!/home"&gt;Back home?&lt;/a&gt;</p>
+					<br />
+					<p>But ofcourse sometimes things get a little bit more sticky and you might want to do it manually!</p>
+					<p>Yes, you can do that too.</p>
+					<p class="code">SH.open('home')</p>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<span class="emph_b">Enjoy :)</span>
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+				</div>
+			</section>
+			<section class="banner motion">
+				<div class="inner">
+					<p class="content emph_i">Built on a lonely night by <a href="/">Michael Zaporozhets</a></p>
+					<div class="clear"></div>
+				</div>
+			</section>
 		</section>
 		<section class="page" id="pagenotfound">
 			<section class="about">
@@ -89,7 +128,7 @@ SH.init(openPage,{forceFallback:true}});</p>
 					<p>
 						<h3>This is not the page you are looking for...</h3>
 					</p>
-					<p><a href="javascript:SH.open('home');">Back home?</a></p>
+					<p><a href="#!/home">Back home?</a></p>
 				</div>
 			</section>
 		</section>
