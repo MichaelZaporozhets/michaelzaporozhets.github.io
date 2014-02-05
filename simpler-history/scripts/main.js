@@ -25,7 +25,6 @@ $(window).scroll(function() {
 });
 
 var openPage = function(page) {
-    console.log('opened page: '+page);
     $('section.page').removeClass('current');
     $('section.page#'+page).addClass('current');
 };
