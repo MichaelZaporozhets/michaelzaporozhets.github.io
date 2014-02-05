@@ -139,7 +139,6 @@ SH.history.patrol = function(callback) {
 	callback(true);
 };
 
-
 SH.init = function(refOpenFunc,options) {
 	var soItBegins = function(refOpenFunc,options) {
 		var pushState = options.forceFallback;
