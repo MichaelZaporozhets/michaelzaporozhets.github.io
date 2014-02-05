@@ -9,6 +9,7 @@ SH.info = {
 };
 SH.refOpenFunc = function(){return false;};
 SH.pages = {
+	'/':[],
 	home:[],
 	pagenotfound:[]
 };
