@@ -22,7 +22,7 @@ SH.loadPage = function(page,args) {
 	if(page == SH.info.root) {
 		page = 'home';
 	}
-	console.l
+	SH.log(page)
 	SH.refOpenFunc(page,args);
 	return false;
 };
