@@ -19,9 +19,10 @@ SH.loadPage = function(page,args) {
 	}
 	SH.info.page = page;
 	SH.info.pageArgs = args;
-	if(page == '') {
+	if(page == root) {
 		page = 'home';
 	}
+	console.l
 	SH.refOpenFunc(page,args);
 	return false;
 };
@@ -29,7 +30,6 @@ SH.errors = [];
 SH.log = function(error) {
 	if(typeof window.console.log !== 'undefined') {
 		console.log(error);
-		SH.errors.push(error);
 	}
 	SH.errors.push(error);
 }
@@ -90,8 +90,8 @@ SH.history.manage = function() {
 				manangeChange();
 			}
 		} else {
-			SH.info.page = '';
-			SH.open('');
+			SH.info.page = SH.info.root;
+			SH.open(SH.info.root);
 		}
 	} else {
 		var hash = document.location.hash;
@@ -119,8 +119,8 @@ SH.history.manage = function() {
 			SH.history.stop = true;
 			window.location.assign('/'+SH.info.root+'#!/' +window.location.pathname.replace(SH.info.root,'').substr(1));
 		} else {
-			SH.info.page = '';
-			SH.open('');
+			SH.info.page = SH.info.root;
+			SH.open(SH.info.root);
 		}
 	}
 };
