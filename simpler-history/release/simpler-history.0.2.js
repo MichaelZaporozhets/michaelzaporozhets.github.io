@@ -5,11 +5,11 @@ SH.info = {
 	domain : '',
 	holdingDomain : '',
 	lastPage: '',
-	root: '/'
+	root: '/',
 };
 SH.refOpenFunc = function(){return false;};
 SH.pages = {
-	'/':[],
+	'':[],
 	home:[],
 	pagenotfound:[]
 };
@@ -19,9 +19,20 @@ SH.loadPage = function(page,args) {
 	}
 	SH.info.page = page;
 	SH.info.pageArgs = args;
+	if(page == '') {
+		page = 'home';
+	}
 	SH.refOpenFunc(page,args);
 	return false;
 };
+SH.errors = [];
+SH.log = function(error) {
+	if(typeof window.console.log !== 'undefined') {
+		console.log(error);
+		SH.errors.push(error);
+	}
+	SH.errors.push(error);
+}
 SH.history = {};
 SH.history.currentPage;
 SH.history.currentPageArgs = [];
@@ -79,8 +90,8 @@ SH.history.manage = function() {
 				manangeChange();
 			}
 		} else {
-			SH.info.page = 'home';
-			SH.open('home');
+			SH.info.page = '';
+			SH.open('');
 		}
 	} else {
 		var hash = document.location.hash;
@@ -108,8 +119,8 @@ SH.history.manage = function() {
 			SH.history.stop = true;
 			window.location.assign('/'+SH.info.root+'#!/' +window.location.pathname.replace(SH.info.root,'').substr(1));
 		} else {
-			SH.info.page = 'home';
-			SH.open('home');
+			SH.info.page = '';
+			SH.open('');
 		}
 	}
 };
@@ -135,12 +146,12 @@ SH.init = function(refOpenFunc,options) {
 			SH.history.pushState = true;
 		}
 		if(typeof refOpenFunc == 'undefined') {
-			console.log('Simpler History: You must declare the main handler as the first argument of SH.init.');
+			SH.log('Simpler History: You must declare the main handler as the first argument of SH.init.');
 		} else {
 			SH.refOpenFunc = refOpenFunc;
 			SH.history.patrol(function(test) {
 				if(test == true) {
-					console.log('Simpler History Initialized...');
+					SH.log('Simpler History Initialized...');
 				}
 			});
 		}
