@@ -19,7 +19,7 @@ SH.loadPage = function(page,args) {
 	}
 	SH.info.page = page;
 	SH.info.pageArgs = args;
-	if(page == root) {
+	if(page == SH.info.root) {
 		page = 'home';
 	}
 	console.l
