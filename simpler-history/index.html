@@ -94,15 +94,8 @@ SH.init(openPage,{forceFallback:true}});</p>
 			<section class="about motion">
 				<div class="inner">
 					<h2>Adding pages</h2>
-					<p>Simpler-history routes to pushState <span class="emph_i">via</span> hashBangs anyway; so if you open a page with the hashbang you want to get to.... You're there! ( naturally )</p>
-					<br />
-					<p class="emph_b">Examples</p>
-					<p>Opening a page with a hashBang href attribute works. ( naturally )</p>
-					<p class="code">&lt;a href="#!/home"&gt;Back home?&lt;/a&gt;</p>
-					<br />
-					<p>But of course sometimes things get a little bit more sticky and you might want to do it manually!</p>
-					<p>Yes, you can do that too.</p>
-					<p class="code">SH.open('home')</p>
+					<p>Adding pages is a breeze, just chuck it into the SH.pages object as an array and away you go!</p>
+					<p class="code">SH.pages.myPage = [];</p>
 				</div>
 			</section>
 			<section class="about motion">
