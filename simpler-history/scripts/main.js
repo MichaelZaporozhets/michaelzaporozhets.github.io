@@ -30,8 +30,8 @@ var openPage = function(page) {
     $('section.page#'+page).addClass('current');
 };
 
-SH.info.root = '/simpler-history/';
-SH.init(openPage,{forceFallback:true});
+SH.info.root = 'simpler-history/';
+SH.init(openPage,{forceFallback:false});
 
 jQuery(function ($) {
     layout();

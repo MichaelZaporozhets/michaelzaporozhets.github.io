@@ -1,11 +1,12 @@
 var SH = {};
 SH.info = {
 	page : '',
-	pageArgs : [],
+	pageArgs : ['nothing'],
 	domain : '',
 	holdingDomain : '',
 	lastPage: '',
 	root: '/',
+	land: ''
 };
 SH.refOpenFunc = function(){return false;};
 SH.pages = {
@@ -19,9 +20,6 @@ SH.loadPage = function(page,args) {
 	}
 	SH.info.page = page;
 	SH.info.pageArgs = args;
-	if(page == SH.info.root) {
-		page = 'home';
-	}
 	SH.log(page)
 	SH.refOpenFunc(page,args);
 	return false;
@@ -70,6 +68,9 @@ SH.history.manage = function() {
 	if(SH.history.pushState == true && document.location.hash.substr(0,3) !== '#!/') {
 		var state = window.location.pathname.replace(SH.info.root,'');
 		var fullState = '';
+		if(state == '/' && SH.info.land == '') {
+			state = '/home';
+		}
 		if(state.substr(0,1) == '/') {
 			state = state.substr(1);
 		}
@@ -90,8 +91,8 @@ SH.history.manage = function() {
 				manangeChange();
 			}
 		} else {
-			SH.info.page = SH.info.root;
-			SH.open(SH.info.root);
+			SH.info.page = SH.info.land;
+			SH.open(SH.info.land);
 		}
 	} else {
 		var hash = document.location.hash;
@@ -101,6 +102,9 @@ SH.history.manage = function() {
 		}
 		if(hash.length > 1 && window.location.pathname.substr(1) == SH.info.root) {
 			if(hash.substr(0,3) == '#!/') {
+				if(hash == '#!/') {
+					hash = '#!/home';
+				}
 				hash = hash.substr(3).split('#')[0];
 				if(hash.split(':')[1] !== 'undefined') {
 					SH.history.currentPageArgs = [];
@@ -119,8 +123,8 @@ SH.history.manage = function() {
 			SH.history.stop = true;
 			window.location.assign('/'+SH.info.root+'#!/' +window.location.pathname.replace(SH.info.root,'').substr(1));
 		} else {
-			SH.info.page = SH.info.root;
-			SH.open(SH.info.root);
+			SH.info.page = SH.info.land;
+			SH.open(SH.info.land);
 		}
 	}
 };
