@@ -30,7 +30,7 @@ var openPage = function(page) {
     $('section.page#'+page).addClass('current');
 };
 
-SH.info.root = 'simpler-history/';
+SH.info.root = '/simpler-history/';
 SH.init(openPage,{forceFallback:true});
 
 jQuery(function ($) {
