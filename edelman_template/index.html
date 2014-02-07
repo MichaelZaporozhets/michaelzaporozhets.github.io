@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title></title>
+
+		<!-- DESCRIPTIVE -->
+		<meta name="author" content="Michael Zaporozhets">
+		<meta name="description" content="">
+		<meta name="copyright" content="&copy; 2013 Michael Zaporozhets">
+		<meta name="keywords" content="mikey.is, michael zaporozhets, zaporozhets, javascript, html, css, front-end, webdevelopment, web-development, web development">
+
+		<!-- TYPES -->
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+		<!-- LANGUAGE/S -->
+		<meta http-equiv="content-language" content="en-us">
+
+		<!-- VIEWPORT -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- TURN THIS OFF WHEN SETTING THE SITE LIVE -->
+		<meta http-equiv="cache-control" content="no-cache">
+
+		<link rel="stylesheet" type="text/css" href="./styles/reset.css" />
+		<link rel="stylesheet" type="text/css" href="./styles/default.css" media="screen" />
+		<script src="./release/min/simpler-history.0.3.min.js"></script>
+		<script src="./scripts/jquery.js"></script>
+		<script src="./scripts/main.js"></script>
+	</head>
+	<body class="index mobile">
+		<header>
+			<div class="inner">
+				<nav>
+					<ul>
+						<li data-pageref="home" class="onScrollShow">Simpler-history</li>
+						<li data-pageref="home" class="onScrollHide">SH</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="page" id="home">
+			<section class="banner motion">
+				<div class="inner">
+					<h1>Simpler-history</h1>
+					<p class="content emph_i">HTML5 pushState without the tears.</p>
+					<a href="./release/min/simpler-history.0.3.min.js" target="_blank" class="button" download="./release/min/simpler-history.0.3.min.js" target="">Download</a>
+					<a href="https://github.com/MichaelZaporozhets/simpler_history" target="_blank" class="button">Github</a>
+					<div class="clear"></div>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<h2>Why?</h2>
+					<p>HTLM5 pushState with a fallback is probably one of the most annoying things to implement the way that <span class="emph_i">you</span> want to, ever.</p>
+					<p>This is the part where you say, 'But Michael, history.js already makes this easy...'. History.js <span class="emph_i">is</span> amazing,  but getting from zero to hero is actually a bit of a pain.</p>
+					<p>Simply put, it does way too much for something that you shouldn't even notice.</p>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<h2>Simpler-history does <span class="emph_i">what?</span></h2>
+					<p>Does the same basic crap everyone uses history.js for, in 97% less code, kilobytes and effort.</p>
+					<p class="emph_i emph_b">Boo-ya!</p>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<h2>How do I make it go go go?</h2>
+					<p>Add something like this to your head.</p>
+					<p class="code">&lt;script src="path/to/simpler-history.0.2.min.js"&gt;&lt;/script&gt;</p>
+					<br />
+					<p class="">And then start it up like this:</p>
+					<p class="code">var openPage = function(page) {
+  console.log('opened page: '+page);
+  return false;
+};
+
+<span class="comment">// You've gotta define where the page root is 
+otherwise everything will break..</span>
+SH.info.root = 'simpler-history/';
+
+<span class="comment">// 'openPage' is the function you want to use to 
+respond to page changes and the seconds argument is options</span>
+SH.init(openPage,{forceFallback:true}});</p>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<h2>Options</h2>
+					<p>So far there's only really one.</p>
+					<p>'forceFallback' lets you force falling back to hashbangs if you don't have any backend to support yo-self.</p>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<h2>Adding pages</h2>
+					<p>Adding pages is a breeze, just chuck it into the SH.pages object as an array and away you go!</p>
+					<p class="code">SH.pages.myPage = [];</p>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<h2>Opening pages</h2>
+					<p>Simpler-history routes to pushState <span class="emph_i">via</span> hashBangs anyway; so if you open a page with the hashbang you want to get to.... You're there! ( naturally )</p>
+					<br />
+					<p class="emph_b">Examples</p>
+					<p>Opening a page with a hashBang href attribute works. ( naturally )</p>
+					<p class="code">&lt;a href="#!/home"&gt;Back home?&lt;/a&gt;</p>
+					<br />
+					<p>But of course sometimes things get a little bit more sticky and you might want to do it manually!</p>
+					<p>Yes, you can do that too.</p>
+					<p class="code">SH.open('home')</p>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<span class="emph_b">Enjoy :)</span>
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+				</div>
+			</section>
+			<section class="banner motion">
+				<div class="inner">
+					<p class="content emph_i">Built on a lonely night by <a href="/">Michael Zaporozhets</a></p>
+					<div class="clear"></div>
+				</div>
+			</section>
+		</section>
+		<section class="page" id="pagenotfound">
+			<section class="about">
+				<div class="inner">
+					<br/>
+					<p>
+						<h3>This is not the page you are looking for...</h3>
+					</p>
+					<p><a href="#!/home">Back home?</a></p>
+				</div>
+			</section>
+		</section>
+	</body>
+</html>

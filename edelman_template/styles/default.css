@@ -1,0 +1,260 @@
+html, body {
+  font-family: Times New Roman;
+  font-weight: 300;
+  background: #FFFFFF;
+  padding-top: 30px;
+  -webkit-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  font-size: 18px;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.inner {
+  max-width: 1160px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: auto;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: auto;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+header {
+  background: #be334f;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  position: fixed;
+  width: 100%;
+  color: #FFF;
+  top: 0px;
+}
+header .inner {
+  padding-right: 0px;
+  width: 960px;
+  margin: auto;
+  padding-left: 20px;
+}
+header .inner nav ul li {
+  text-align: center;
+  display: inline-block;
+  line-height: 60px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+header .inner nav ul li.onScrollShow {
+  -webkit-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 0px;
+  white-space: pre;
+  overflow: hidden;
+  float: left;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin: 0px;
+}
+header .inner nav ul li.onScrollHide {
+  -webkit-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  margin-right: 0px;
+  white-space: pre;
+  overflow: hidden;
+  float: left;
+}
+header .inner nav ul li:hover {
+  cursor: pointer;
+  background: #96283e;
+}
+
+section.page {
+  -webkit-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  width: 960px;
+  left: 50%;
+  margin-left: -480px;
+  top: -300px;
+}
+section.page.current {
+  z-index: 2;
+  opacity: 1;
+  display: block;
+  top: 70px;
+}
+section.page section {
+  -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
+section.page p, section.page span {
+  font-size: inherit;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+section.page p.emph_b, section.page span.emph_b {
+  font-weight: bold;
+}
+section.page p.emph_i, section.page span.emph_i {
+  font-style: italic;
+}
+section.page p.code {
+  background: #EEE;
+  display: inline-block;
+  min-width: 90%;
+  line-height: 150%;
+  border-left: 5px solid #000;
+  padding-left: 10px;
+  padding-right: 20px;
+  display: block;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+section.page p.code span.comment {
+  color: #666;
+}
+section.page .triangle {
+  height: 102px;
+  width: 102px;
+  float: left;
+  margin-top: -30px;
+  border: 51px solid transparent;
+  border-top: 51px solid #EEE;
+  border-right: 51px solid #EEE;
+  margin-left: -102px;
+}
+section.page .banner {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+section.page .banner a {
+  color: #FFF !important;
+}
+section.page .main {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border-left: 20px solid #E0E0E0;
+  margin: auto;
+  margin-top: -20px;
+}
+section.page .main p {
+  font-size: 16px;
+  line-height: 32px;
+  max-width: 600px;
+  display: block;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+section.page#home {
+  padding-left: 20px;
+}
+section.page#home .banner {
+  background: #be334f;
+}
+section.page#home .banner h1 {
+  font-size: 96px;
+  color: #FFF;
+  width: 100%;
+}
+section.page#home .banner p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #FFF;
+  margin-bottom: 0px;
+}
+section.page#home .banner .button {
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #96283e;
+  background: #FFF;
+  font-size: 24px;
+  border-bottom-width: 2px;
+  color: #000 !important;
+  padding: 10px;
+  text-decoration: none;
+}
+section.page#home .banner .button:hover {
+  cursor: pointer;
+}
+section.page#home .about {
+  padding-top: 30px;
+}
+section.page#home .about p {
+  line-height: 32px;
+  max-width: 600px;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+body.mobile section.page {
+  width: 100% !important;
+  left: 0px !important;
+  margin-left: 0px !important;
+  overflow: hidden;
+  padding-right: 20px;
+}
+body.mobile section.page .inner {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+body.mobile section.page h1 {
+  font-size: 36px !important;
+}
