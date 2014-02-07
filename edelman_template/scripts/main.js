@@ -30,7 +30,7 @@ var openPage = function(page) {
 };
 
 SH.info.root = 'edelman_template/';
-SH.init(openPage,{forceFallback:false});
+SH.init(openPage,{forceFallback:true});
 
 jQuery(function ($) {
     layout();
