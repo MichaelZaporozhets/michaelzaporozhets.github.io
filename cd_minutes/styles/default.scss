@@ -7,7 +7,7 @@
 	transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-$scheme : #0080ce;
+$scheme : #102B3C;
 
 html,body { font-family: Arial; font-weight: 300; background: #FFFFFF; padding-top: 30px; @include Transition(2s); font-size: 18px; }
 body * { box-sizing: border-box; }
@@ -72,7 +72,7 @@ section.page { @include Transition(0s); z-index: 1; opacity: 0; position: absolu
 
 section.page#home { padding-left: 20px;
 	.banner { border-bottom: 5px solid $scheme;
-		h1 { font-size: 96px; color: #FFF; width: 100%;}
+		h1 { font-size: 92px; color: $scheme; width: 100%;}
 		p { font-size: 20px; margin-top: 0px; color: #FFF; margin-bottom: 0px; }
 		.button { display: inline-block; margin-top: 20px; border: 1px solid darken($scheme,10%); background: #FFF; font-size: 24px; border-bottom-width: 2px;color: #000 !important;padding: 10px; text-decoration: none;
 			&:hover { cursor: pointer; }

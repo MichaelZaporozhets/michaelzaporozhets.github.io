@@ -44,7 +44,7 @@ h2 {
 }
 
 header {
-  background: #0080ce;
+  background: #102b3c;
   position: relative;
   z-index: 3;
   -webkit-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
@@ -102,7 +102,7 @@ header .inner nav ul li.onScrollHide {
 }
 header .inner nav ul li:hover {
   cursor: pointer;
-  background: #00609b;
+  background: #050e14;
 }
 
 section.page {
@@ -195,11 +195,11 @@ section.page#home {
   padding-left: 20px;
 }
 section.page#home .banner {
-  border-bottom: 5px solid #0080ce;
+  border-bottom: 5px solid #102b3c;
 }
 section.page#home .banner h1 {
-  font-size: 96px;
-  color: #FFF;
+  font-size: 92px;
+  color: #102b3c;
   width: 100%;
 }
 section.page#home .banner p {
@@ -211,7 +211,7 @@ section.page#home .banner p {
 section.page#home .banner .button {
   display: inline-block;
   margin-top: 20px;
-  border: 1px solid #00609b;
+  border: 1px solid #050e14;
   background: #FFF;
   font-size: 24px;
   border-bottom-width: 2px;
@@ -234,7 +234,7 @@ section.page#home .about p {
   letter-spacing: 1px;
 }
 section.page#home .footer {
-  border-top: 5px solid #0080ce;
+  border-top: 5px solid #102b3c;
 }
 section.page#home .footer h1 {
   font-size: 96px;
@@ -250,7 +250,7 @@ section.page#home .footer p {
 section.page#home .footer .button {
   display: inline-block;
   margin-top: 20px;
-  border: 1px solid #00609b;
+  border: 1px solid #050e14;
   background: #FFF;
   font-size: 24px;
   border-bottom-width: 2px;
@@ -356,6 +356,6 @@ body.mobile section.page h1 {
   font-size: 80px;
   font-family: Arial;
   font-weight: bold;
-  color: #0080ce;
+  color: #102b3c;
   margin-top: 10px;
 }

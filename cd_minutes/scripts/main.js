@@ -29,7 +29,7 @@ var openPage = function(page) {
     $('section.page#'+page).addClass('current');
 };
 
-SH.info.root = 'edelman_template/';
+SH.info.root = 'cd_minutes/';
 SH.init(openPage,{forceFallback:true});
 
 jQuery(function ($) {
