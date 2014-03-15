@@ -23,7 +23,7 @@
 
 		<link rel="stylesheet" type="text/css" href="./styles/reset.css" />
 		<link rel="stylesheet" type="text/css" href="./styles/default.css" media="screen" />
-		<script src="./release/min/simpler-history.0.2.min.js"></script>
+		<script src="./release/min/simpler-history.0.3.min.js"></script>
 		<script src="./scripts/jquery.js"></script>
 		<script src="./scripts/main.js"></script>
 	</head>
@@ -43,8 +43,13 @@
 				<div class="inner">
 					<h1>Hishtory.js</h1>
 					<p class="content emph_i">HTML5 pushState without the tears.</p>
+<<<<<<< HEAD:hishtory.js/index.html
 					<a href="https://github.com/MichaelZaporozhets/hishtory.js" target="_blank" class="button" download="https://raw.github.com/MichaelZaporozhets/hishtory.js/master/release/0.3/min/hishtory.0.3.min.js" target="test">Download</a>
 					<a href="https://github.com/MichaelZaporozhets/hishtory.js" target="_blank" class="button">Github</a>
+=======
+					<a href="./release/min/simpler-history.0.3.min.js" target="_blank" class="button" download="./release/min/simpler-history.0.3.min.js" target="">Download</a>
+					<a href="https://github.com/MichaelZaporozhets/simpler_history" target="_blank" class="button">Github</a>
+>>>>>>> FETCH_HEAD:simpler-history/index.html
 					<div class="clear"></div>
 				</div>
 			</section>
@@ -89,6 +94,13 @@ SH.init(openPage,{forceFallback:true}});</p>
 					<h2>Options</h2>
 					<p>So far there's only really one.</p>
 					<p>'forceFallback' lets you force falling back to hashbangs if you don't have any backend to support yo-self.</p>
+				</div>
+			</section>
+			<section class="about motion">
+				<div class="inner">
+					<h2>Adding pages</h2>
+					<p>Adding pages is a breeze, just chuck it into the SH.pages object as an array and away you go!</p>
+					<p class="code">SH.pages.myPage = [];</p>
 				</div>
 			</section>
 			<section class="about motion">

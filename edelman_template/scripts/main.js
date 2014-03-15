@@ -18,7 +18,7 @@ $(window).resize(function() {
 $(window).scroll(function() {
     var y = $(window).scrollTop();
     if(y > 90) {
-        $('nav li.onScrollShow').css({'width':170}).next().hide();
+        $('nav li.onScrollShow').css({'width':205}).next().hide();
     } else {
         $('nav li.onScrollShow').css({'width':''}).next().show();
     }
@@ -29,8 +29,8 @@ var openPage = function(page) {
     $('section.page#'+page).addClass('current');
 };
 
-SH.info.root = 'simpler-history/';
-SH.init(openPage,{forceFallback:false});
+SH.info.root = 'edelman_template/';
+SH.init(openPage,{forceFallback:true});
 
 jQuery(function ($) {
     layout();

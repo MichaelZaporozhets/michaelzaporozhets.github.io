@@ -1,0 +1,361 @@
+html, body {
+  font-family: Arial;
+  font-weight: 300;
+  background: #FFFFFF;
+  padding-top: 30px;
+  -webkit-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 2s cubic-bezier(0.77, 0, 0.175, 1);
+  font-size: 18px;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.inner {
+  max-width: 1160px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1 {
+  font-size: 42px;
+  margin: auto;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: auto;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.clear {
+  clear: both;
+}
+
+header {
+  background: #102b3c;
+  position: relative;
+  z-index: 3;
+  -webkit-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+  position: fixed;
+  width: 100%;
+  color: #FFF;
+  top: 0px;
+}
+header .inner {
+  padding-right: 0px;
+  width: 960px;
+  margin: auto;
+  padding-left: 20px;
+}
+header .inner nav ul li {
+  text-align: center;
+  display: inline-block;
+  line-height: 60px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+header .inner nav ul li.onScrollShow {
+  -webkit-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 0px;
+  white-space: pre;
+  overflow: hidden;
+  float: left;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin: 0px;
+}
+header .inner nav ul li.onScrollHide {
+  -webkit-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 200ms cubic-bezier(0.77, 0, 0.175, 1);
+  margin-right: 0px;
+  white-space: pre;
+  overflow: hidden;
+  float: left;
+}
+header .inner nav ul li:hover {
+  cursor: pointer;
+  background: #050e14;
+}
+
+section.page {
+  -webkit-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 1;
+  opacity: 0;
+  position: absolute;
+  width: 960px;
+  left: 50%;
+  margin-left: -480px;
+  top: -300px;
+}
+section.page.current {
+  z-index: 2;
+  opacity: 1;
+  display: block;
+  top: 70px;
+}
+section.page section {
+  -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  position: relative;
+}
+section.page p, section.page span {
+  font-size: inherit;
+  line-height: 32px;
+  letter-spacing: 1px;
+}
+section.page p.emph_b, section.page span.emph_b {
+  font-weight: bold;
+}
+section.page p.emph_i, section.page span.emph_i {
+  font-style: italic;
+}
+section.page p.code {
+  background: #EEE;
+  display: inline-block;
+  min-width: 90%;
+  line-height: 150%;
+  border-left: 5px solid #000;
+  padding-left: 10px;
+  padding-right: 20px;
+  display: block;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+section.page p.code span.comment {
+  color: #666;
+}
+section.page .banner {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+section.page .banner a {
+  color: #FFF !important;
+}
+section.page .main {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border-left: 20px solid #E0E0E0;
+  margin: auto;
+  margin-top: -20px;
+}
+section.page .main p {
+  font-size: 16px;
+  line-height: 32px;
+  max-width: 600px;
+  display: block;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+section.page#home {
+  padding-left: 20px;
+}
+section.page#home .banner {
+  border-bottom: 5px solid #102b3c;
+}
+section.page#home .banner h1 {
+  font-size: 92px;
+  color: #102b3c;
+  width: 100%;
+}
+section.page#home .banner p {
+  font-size: 20px;
+  margin-top: 0px;
+  color: #FFF;
+  margin-bottom: 0px;
+}
+section.page#home .banner .button {
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #050e14;
+  background: #FFF;
+  font-size: 24px;
+  border-bottom-width: 2px;
+  color: #000 !important;
+  padding: 10px;
+  text-decoration: none;
+}
+section.page#home .banner .button:hover {
+  cursor: pointer;
+}
+section.page#home .about {
+  padding-top: 30px;
+}
+section.page#home .about p {
+  line-height: 32px;
+  max-width: 600px;
+  display: block;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+section.page#home .footer {
+  border-top: 5px solid #102b3c;
+}
+section.page#home .footer h1 {
+  font-size: 96px;
+  color: #FFF;
+  width: 100%;
+}
+section.page#home .footer p {
+  font-size: 20px;
+  margin-top: 0px;
+  color: #FFF;
+  margin-bottom: 0px;
+}
+section.page#home .footer .button {
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #050e14;
+  background: #FFF;
+  font-size: 24px;
+  border-bottom-width: 2px;
+  color: #000 !important;
+  padding: 10px;
+  text-decoration: none;
+}
+section.page#home .footer .button:hover {
+  cursor: pointer;
+}
+
+body.mobile section.page {
+  width: 100% !important;
+  left: 0px !important;
+  margin-left: 0px !important;
+  overflow: hidden;
+  padding-right: 20px;
+}
+body.mobile section.page .inner {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+body.mobile section.page h1 {
+  font-size: 36px !important;
+}
+
+.logo {
+  display: inline-block;
+}
+.logo .container {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  margin-top: 10px;
+  float: left;
+  background: transparent;
+}
+.logo .container .part {
+  -webkit-transition: all 2000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 2000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ie-transition: all 2000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: all 2000ms cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 2000ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 2000ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 90px;
+  height: 90px;
+  box-sizing: border-box;
+  position: absolute;
+}
+.logo .container .part.topLeft .triangle {
+  top: 0px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  border: 45px solid white;
+  border-left: 45px solid transparent;
+  border-top: 45px solid transparent;
+}
+.logo .container .part.topRight .triangle {
+  width: 0px;
+  height: 0px;
+  border: 45px solid #0182c4;
+  border-top: 45px solid transparent;
+  border-right: 45px solid transparent;
+  opacity: 0.9;
+}
+.logo .container .part.bottomRight .triangle {
+  width: 0px;
+  height: 0px;
+  border: 45px solid #304d9d;
+  border-bottom: 45px solid transparent;
+  border-right: 45px solid transparent;
+  opacity: 0.9;
+}
+.logo .container .part.bottomLeft .triangle {
+  width: 0px;
+  height: 0px;
+  border: 45px solid #1e2a64;
+  border-bottom: 45px solid transparent;
+  border-left: 45px solid transparent;
+  opacity: 0.9;
+}
+.logo .container .part.topLeft {
+  left: 0px;
+  top: 0px;
+}
+.logo .container .part.topRight {
+  left: 90px;
+  top: 0px;
+}
+.logo .container .part.bottomLeft {
+  top: 90px;
+  left: 0px;
+}
+.logo .container .part.bottomRight {
+  top: 90px;
+  left: 90px;
+}
+.logo span.text {
+  float: left;
+  line-height: 180px;
+  padding-left: 30px;
+  font-size: 80px;
+  font-family: Arial;
+  font-weight: bold;
+  color: #102b3c;
+  margin-top: 10px;
+}

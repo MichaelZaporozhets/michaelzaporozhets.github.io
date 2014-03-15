@@ -25,12 +25,13 @@ $(window).scroll(function() {
 });
 
 var openPage = function(page) {
+    console.log('opened page: '+page);
     $('section.page').removeClass('current');
     $('section.page#'+page).addClass('current');
 };
 
-SH.info.root = 'simpler-history/';
-SH.init(openPage,{forceFallback:false});
+SH.info.root = '';
+SH.init(openPage,{forceFallback:true});
 
 jQuery(function ($) {
     layout();

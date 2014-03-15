@@ -1,0 +1,124 @@
+@mixin Transition($duration: 1000ms) {
+	-webkit-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	-ie-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	-ms-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	-o-transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+	transition: all $duration cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+$scheme : #102B3C;
+
+html,body { font-family: Arial; font-weight: 300; background: #FFFFFF; padding-top: 30px; @include Transition(2s); font-size: 18px; }
+body * { box-sizing: border-box; }
+.inner { max-width:1160px;padding-left: 20px; padding-right: 20px; }
+h1,h2,h3,h4 { 
+	&.script {  }
+}
+h1 { font-size: 42px; margin: auto; width: 100%; font-weight: bold;letter-spacing: 3px; }
+h2 { font-size: 24px; margin: auto; width: 100%; font-weight: bold;letter-spacing: 1px; margin-bottom: 20px; }
+h3 {  }
+h4 {  }
+.clear { clear: both; }
+header { background: $scheme; position: relative; z-index: 3; @include Transition(300ms); position: fixed; width: 100%; color: #FFF; top: 0px;
+	.inner { padding-right: 0px; width: 960px; margin: auto; padding-left: 20px;
+		nav {
+			ul {
+				li { text-align:center; display: inline-block; line-height: 60px; font-size: 18px; letter-spacing: 1px; padding-right: 20px; padding-left: 20px;
+					&.onScrollShow { @include Transition(200ms);width: 0px; white-space: pre; overflow: hidden; float: left; padding-right: 0px; padding-left: 0px; margin: 0px; }
+					&.onScrollHide { @include Transition(200ms); margin-right:0px; white-space: pre; overflow: hidden; float: left; }
+					&:hover { cursor: pointer; background: darken($scheme,10%);}
+				}
+			}
+		}
+	}
+}
+
+section.page { @include Transition(0s); z-index: 1; opacity: 0; position: absolute; width: 960px; left:50%; margin-left: -480px; top: -300px;
+	&.current { z-index: 2; opacity: 1; display:block; top: 70px; }
+
+	section{ @include Transition(1s);position: relative; }
+
+
+
+	p,span { font-size: inherit;line-height: 32px; letter-spacing: 1px;
+		&.emph_b { font-weight: bold; }
+		&.emph_i { font-style: italic; }
+	}
+
+	p.code {
+		background: #EEE;
+		display: inline-block;
+		min-width: 90%;
+		line-height: 150%;
+		border-left: 5px solid #000;
+		padding-left: 10px;
+		padding-right: 20px;
+		display: block;
+		font-family: monospace;
+		white-space: pre-wrap;
+		word-wrap: break-word;      
+		span.comment { color: #666; }
+	}
+
+	
+	.banner {padding-top: 20px; padding-bottom: 30px; background: transparent; position: relative; z-index: 2; padding-left: 20px;padding-right: 20px; text-align: center;
+		a { color: #FFF !important; }
+	}
+	.main {padding-top: 20px; padding-bottom: 50px; border-left: 20px solid #E0E0E0; margin: auto; margin-top: -20px;
+		p { font-size: 16px;line-height: 32px; max-width: 600px; display:block; margin-bottom: 30px; letter-spacing: 1px;}
+	}
+}
+
+section.page#home { padding-left: 20px;
+	.banner { border-bottom: 5px solid $scheme;
+		h1 { font-size: 92px; color: $scheme; width: 100%;}
+		p { font-size: 20px; margin-top: 0px; color: #FFF; margin-bottom: 0px; }
+		.button { display: inline-block; margin-top: 20px; border: 1px solid darken($scheme,10%); background: #FFF; font-size: 24px; border-bottom-width: 2px;color: #000 !important;padding: 10px; text-decoration: none;
+			&:hover { cursor: pointer; }
+		}
+	}
+	.about { padding-top: 30px;
+		p { line-height: 32px; max-width: 600px; display:block; margin-bottom: 15px; margin-top: 15px; letter-spacing: 1px;}
+	}
+	.footer { border-top: 5px solid $scheme;
+		h1 { font-size: 96px; color: #FFF; width: 100%;}
+		p { font-size: 20px; margin-top: 0px; color: #FFF; margin-bottom: 0px; }
+		.button { display: inline-block; margin-top: 20px; border: 1px solid darken($scheme,10%); background: #FFF; font-size: 24px; border-bottom-width: 2px;color: #000 !important;padding: 10px; text-decoration: none;
+			&:hover { cursor: pointer; }
+		}
+	}
+}
+
+
+body.mobile {
+	section.page { width: 100% !important; left: 0px !important; margin-left: 0px !important; overflow: hidden; padding-right: 20px;
+		.inner { padding-left: 5px; padding-right: 5px; }
+		h1 { font-size: 36px !important; }
+	}
+}
+
+
+
+
+//LOGO
+
+.logo { display: inline-block;
+	$size: 180px;
+	.container { width: $size; height: $size; position: relative; margin-top: 10px; float: left; background: transparent;  }
+	.container .part { @include Transition(2000ms); width: $size*0.5; height: $size*0.5; box-sizing: border-box; position: absolute; }
+
+	.container .part.topLeft .triangle { top: 0px; left: 0px; width: 0px; height: 0px; border: $size/4 solid #FFF; border-left: $size/4 solid transparent;border-top: $size/4 solid transparent; }
+	.container .part.topRight .triangle { width: 0px; height: 0px; border: $size/4 solid #0182c4; border-top: $size/4 solid transparent;border-right: $size/4 solid transparent; opacity: 0.9; }
+	.container .part.bottomRight .triangle { width: 0px; height: 0px; border: $size/4 solid #304d9d; border-bottom: $size/4 solid transparent;border-right: $size/4 solid transparent; opacity: 0.9; }
+	.container .part.bottomLeft .triangle { width: 0px; height: 0px; border: $size/4 solid #1e2a64; border-bottom: $size/4 solid transparent;border-left: $size/4 solid transparent; opacity: 0.9; }
+
+	.container .part.topLeft { left: 0px; top: 0px; }
+	.container .part.topRight { left: $size/2; top: 0px; }
+	.container .part.bottomLeft { top: $size/2; left: 0px; }
+	.container .part.bottomRight { top: $size/2; left: $size/2; }
+
+	//title
+
+	span.text { float: left; line-height:$size; padding-left: 30px; font-size: 80px; font-family: Arial; font-weight: bold; color: $scheme; margin-top: 10px; }
+}
